@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki Scratch Highlighter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Wikipedia scratch search</p>
+          <h1>Find a word across many Wikipedia pages.</h1>
+          <p class="subtitle">
+            Type a word, pick how many results to scan, and we will pull context
+            lines that highlight it in yellow — like quick-cut edits.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="spotlight">
+            <div class="spotlight-bg" id="spotlightBg">
+              <div class="spotlight-snippet" id="spotlightSnippet">
+                Background clips will appear here once you scratch Wikipedia.
+              </div>
+            </div>
+            <span class="visually-hidden" id="centerWord">Type a word</span>
+          </div>
+          <div class="status" id="status">Ready to scratch.</div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <label>
+          Word to highlight
+          <input id="query" type="text" placeholder="e.g. focus" />
+        </label>
+        <label>
+          Results to scan
+          <input id="limit" type="number" min="3" max="25" value="10" />
+        </label>
+        <button id="searchBtn">Scratch Wikipedia</button>
+      </section>
+    </div>
+
+    <footer>
+      Powered by the MediaWiki API · Results are excerpted and highlighted locally.
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
